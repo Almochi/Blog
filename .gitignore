@@ -1,0 +1,49 @@
+# 构建产物
+dist/
+
+# 主题集成缓存（esbuild 打包的配置、字体子集）
+.shirones/
+
+# 内容仓工作副本与备份
+.content-src/
+.content-backup/
+content.lock.json
+
+# 生成的类型
+.astro/
+
+# 依赖
+node_modules/
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# 环境变量
+.env
+.env.production
+
+# 系统文件
+.DS_Store
+
+# 锁文件（保留 pnpm-lock.yaml）
+package-lock.json
+yarn.lock
+bun.lockb
+
+# 编辑器
+.idea/
+.vscode/
+*.iml
+
+# 生成的字体子集与图标集合
+src/assets/fonts/.subset/
+src/generated/
+
+# 动态生成的内容（构建前由脚本写入）
+shirones/config/FooterConfig.html
+
+# 各平台本地配置
+.vercel/
+.netlify/

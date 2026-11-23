@@ -1,0 +1,6 @@
+# pnpm 12 用 `allowBuilds` 批准依赖的安装脚本（旧版是 onlyBuiltDependencies）。
+# sharp 用于图片优化（AVIF/WebP 生成），esbuild 用于加载 TypeScript 配置。
+# 缺这一段，pnpm 会拒绝安装并报 ERR_PNPM_IGNORED_BUILDS。
+allowBuilds:
+  esbuild: true
+  sharp: true
