@@ -19,7 +19,7 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 1,
 		title: "Mizuki",
-		imgurl: "https://avatars.githubusercontent.com/u/225602409?v=4&s=640",
+		imgurl: "/images/friends/mizuki.webp",
 		desc: "Another Fuwari-based blog theme with docs",
 		siteurl: "https://mizuki.mysqil.com",
 		tags: ["Blog", "Theme"],
@@ -27,7 +27,7 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 2,
 		title: "Astro",
-		imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
+		imgurl: "/images/friends/astro.webp",
 		desc: "The web framework for content-driven websites",
 		siteurl: "https://astro.build",
 		tags: ["Framework"],
@@ -35,10 +35,42 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 3,
 		title: "Material 3",
-		imgurl: "https://avatars.githubusercontent.com/u/19478152?v=4&s=640",
+		imgurl: "/images/friends/material3.webp",
 		desc: "Material Design 3 — the next generation of Material Design",
 		siteurl: "https://m3.material.io",
 		tags: ["Design"],
+	},
+	{
+		id: 4,
+		title: "麦麦 MaiBot",
+		imgurl: "/images/friends/maibot.webp",
+		desc: "我在试着学习像人类一样陪伴你",
+		siteurl: "https://maibot.chat/",
+		tags: ["Bot", "社群"],
+	},
+	{
+		id: 5,
+		title: "黎明の小站",
+		imgurl: "/images/friends/yoake.webp",
+		desc: "疲れたなら、ここで少し休んでいいよ",
+		siteurl: "https://blog.yoake.dev/",
+		tags: ["Blog", "ACG"],
+	},
+	{
+		id: 6,
+		title: "Eric-Terminal 的博客",
+		imgurl: "/images/friends/eric-terminal.webp",
+		desc: "留白处，见晖光",
+		siteurl: "https://blog.ericterminal.com/",
+		tags: ["Blog", "技术"],
+	},
+	{
+		id: 7,
+		title: "树梢上有只鸟",
+		imgurl: "/images/friends/xzt.webp",
+		desc: "客官，里面请~",
+		siteurl: "https://www.xzt.plus/",
+		tags: ["Blog"],
 	},
 ];
 

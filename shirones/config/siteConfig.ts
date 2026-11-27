@@ -10,12 +10,11 @@ import { withUserConfig } from "@/utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	// 主站 .cn（已备案，走 EdgeOne 国内加速）。构建时可用 SITE_URL 覆盖，
-	// 例如将来做 .com 镜像站：SITE_URL=https://blog.almochi.com/ pnpm build
-	site: process.env.SITE_URL ?? "https://blog.almochi.cn/",
+	// 站点 URL：这里写主站 .com；.cn 镜像由 scripts/apply-env.mjs 用 SITE_URL 环境变量替换。
+	site: "https://blog.almochi.com/",
 	base: "/",
-	title: "Almochi",
-	subtitle: "记录与分享",
+	title: "杏仁团子",
+	subtitle: "写一点代码，也收藏一些日常。",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
@@ -29,7 +28,8 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		reduceMotion: true, // 是否展示减少动效切换
 		texture: true, // 是否展示背景纹理选择
 	},
-	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	// 站点语言：zh_CN / en / ja / ko / zh_TW / es / th / vi / id / tr（内置词典 + i18nConfig 覆盖）。
+	lang: "zh_CN",
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
 	timeZone: "Asia/Shanghai",
 	themeColor: {
@@ -59,8 +59,18 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// desktop 用于 >= 1024px；mobile 仅用于 < 1024px 的首页，手机非首页不显示壁纸。
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
-			desktop: ["assets/images/banner/desktop/1.webp"],
-			mobile: ["assets/images/banner/mobile/1.webp"],
+			desktop: [
+				"/images/banner/desktop/starlit-railway.webp",
+				"/images/banner/desktop/autumn-cafe.webp",
+				"/images/banner/desktop/sakura-maid-sisters.webp",
+				"/images/banner/desktop/window-maids.webp",
+			],
+			mobile: [
+				"/images/banner/mobile/starlit-railway.webp",
+				"/images/banner/mobile/autumn-cafe.webp",
+				"/images/banner/mobile/sakura-maid-sisters.webp",
+				"/images/banner/mobile/window-maids.webp",
+			],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
 		position: "center",
@@ -72,13 +82,12 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "Shirone",
+			title: "杏仁团子",
+			// 一言加载失败或离线时使用的本地回退文案。
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"写一点代码，拍一点猫，普通的日子也值得留档。",
+				"今天没有做什么大事，不过，能留下一点文字就好。",
+				"在代码与故事之间，慢慢整理自己喜欢的东西。",
 			],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
@@ -90,7 +99,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 				// 打字完成后停顿时间，单位为毫秒。
 				pauseTime: 2000,
 				// 完成后是否循环播放；关闭表示只播放一次。
-				loop: true,
+				loop: false,
 			},
 		},
 		carousel: {

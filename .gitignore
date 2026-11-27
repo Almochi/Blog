@@ -41,9 +41,6 @@ bun.lockb
 src/assets/fonts/.subset/
 src/generated/
 
-# 动态生成的内容（构建前由脚本写入）
-shirones/config/FooterConfig.html
-
 # 各平台本地配置
 .vercel/
 .netlify/

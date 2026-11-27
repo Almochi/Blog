@@ -5,11 +5,10 @@
   "type": "module",
   "packageManager": "pnpm@12.18.0",
   "scripts": {
-    "dev": "astro dev",
-    "build": "node scripts/prepare-build.mjs && astro build",
+    "dev": "node scripts/apply-env.mjs && astro dev",
+    "build": "node scripts/apply-env.mjs && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "node scripts/prepare-build.mjs"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "^7.4.5",
@@ -18,6 +17,6 @@
     "sharp": "^0.35.5",
     "@astrojs/check": "^0.9.12",
     "typescript": "^6.0.3",
-    "shirones": "file:/tmp/shirones.tgz"
+    "shirones": "0.1.6"
   }
 }

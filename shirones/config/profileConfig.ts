@@ -6,26 +6,34 @@ import { withUserConfig } from "@/utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const profileConfig: ProfileConfig = withUserConfig("profile", {
-	avatar: "assets/images/demo-avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "Almochi",
-	bio: "记录与分享。",
+	avatar: "/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	name: "小泽",
+	bio: "本科在读。写一点代码，拍一点照片，Galgame 也玩一点。",
 	links: [
 		{
-			name: "X",
-			icon: "fa7-brands:x-twitter", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://x.com",
+			name: "GitHub",
+			icon: "fa7-brands:github",
+			url: "https://github.com/Dreamwxz",
+		},
+		{
+			name: "Bilibili",
+			icon: "fa7-brands:bilibili",
+			url: "https://space.bilibili.com/673685324",
+		},
+		{
+			name: "邮箱",
+			icon: "material-symbols:mail-outline-rounded",
+			url: "mailto:dream.wxz@outlook.com",
 		},
 		{
 			name: "Steam",
 			icon: "fa7-brands:steam",
-			url: "https://store.steampowered.com",
+			url: "https://steamcommunity.com/id/dreamwxz/",
 		},
 		{
-			name: "GitHub",
-			icon: "fa7-brands:github",
-			url: "https://github.com/Almochi",
+			name: "X",
+			icon: "fa7-brands:x-twitter",
+			url: "https://x.com/DreamXiaoze",
 		},
 	],
 });
