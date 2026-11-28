@@ -4,7 +4,7 @@
 
 ## 维护说明
 
-- **社交图标**：主题在 npm 包模式下，运行时图标集合来自包内快照，项目新引用的图标不会进入该集合，`profileConfig.links[].icon` 会渲染成空白。因此 `src/components/organisms/Profile.astro` 是一份覆盖组件，只对 `fa7-brands:bilibili` 与 `material-symbols:mail-outline-rounded` 改为内联 SVG 兜底，其余图标仍交给主题 `<Icon>`。升级主题后可对比包内同名文件是否变化。
+- **社交图标**：主题在 npm 包模式下会用 `@/` 别名先把 `@/generated/local-icon-collections` 解析到包内快照，项目侧生成的集合因此不生效，配置里新引用的图标会渲染成空白。`astro.config.mjs` 里的 `preferUserIconCollections` 把这个模块指回项目生成的文件；`src/icons/*.svg` 中的自定义图标（如 `bilibili.svg`、`mail.svg`）随之可用，配置里直接写文件名即可（如 `icon: "bilibili"`）。升级主题后若上游修复了该解析顺序，可去掉这个插件。
 - **站点图标**：`shirones/config/siteConfig.ts` 的 `favicon` 指向 `public/favicon/almochi-*.png`，使用独立文件名而非主题默认的 `favicon-*`，以免浏览器继续沿用旧缓存图标。
 
 ## 致谢

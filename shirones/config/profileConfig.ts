@@ -17,12 +17,12 @@ export const profileConfig: ProfileConfig = withUserConfig("profile", {
 		},
 		{
 			name: "Bilibili",
-			icon: "fa7-brands:bilibili",
+			icon: "bilibili", // 项目自带图标：src/icons/bilibili.svg
 			url: "https://space.bilibili.com/673685324",
 		},
 		{
 			name: "邮箱",
-			icon: "material-symbols:mail-outline-rounded",
+			icon: "mail", // 项目自带图标：src/icons/mail.svg
 			url: "mailto:dream.wxz@outlook.com",
 		},
 		{
