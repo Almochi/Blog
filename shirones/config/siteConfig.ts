@@ -132,7 +132,12 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	},
 	favicon: [
 		// 浏览器标签页图标，路径相对于 public 目录。
-		{ src: "/logo/icon.webp" },
+		// 用独立文件名（almochi-*）而不是主题默认的 favicon-*，避免浏览器继续使用旧的缓存图标。
+		{ src: "/favicon/almochi-32.png", sizes: "32x32" },
+		{ src: "/favicon/almochi-128.png", sizes: "128x128" },
+		{ src: "/favicon/almochi-180.png", sizes: "180x180" },
+		{ src: "/favicon/almochi-192.png", sizes: "192x192" },
+		{ src: "/favicon/almochi-512.png", sizes: "512x512" },
 	],
 });
 
